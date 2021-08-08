@@ -13,6 +13,7 @@ Datasets can be download in [Google Drive](https://drive.google.com/drive/folder
   * [Synthetic training dataset](#synthetic-training-dataset)
   * [Synthetic test dataset](#synthetic-test-dataset)
 * [The Captured Real-world Dataset](#the-captured-real-world-dataset)
+  * [Camera control code](#camera-control-code)
   * [Real-world static dataset with GT HDR](#real-world-static-scene-dataset-with-gt-hdr)
   * [Real-world dynamic dataset with GT HDR](#real-world-dynamic-dataset-with-gt-hdr)
   * [Real-world dynamic dataset without GT HDR](#real-world-dynamic-dataset-without-gt-hdr)
@@ -130,6 +131,7 @@ The generated videos with alternating exposures can be found in Google Drive (`S
 
 
 ## The Captured Real-world Dataset
+### Camera control code
 To facilitate a more comprehensive evaluation on real data, we captured a real-world dataset and generated reliable ground truth HDR for evaluation. We used an off-the-shelf [Basler acA4095-30uc camera](https://www.baslerweb.com/en/products/cameras/area-scan-cameras/ace/aca4096-30uc/) for capturing videos with alternating exposures (i.e., two and three exposures) in a variety of scenes.
 Three different types of video data are captured, namely, the static scene with GT, dynamic scenes with GT, and dynamic scenes without GT. The python code for controlling the camera can be found in [`./data_capture/`](./data_capture/README.md).
 
@@ -197,6 +199,5 @@ If you find this dataset or code useful in your research, please consider citing
   journal=ICCV,
   year={2021}
 }
-
 ```
 
