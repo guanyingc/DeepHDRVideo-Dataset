@@ -1,0 +1,8 @@
+.DS_Store
+*/meta_data.npy
+real_data/
+*.tif
+*.npy
+*.pyc
+*.pyo
+data/
