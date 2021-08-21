@@ -83,7 +83,7 @@ class RawDataProcessor(object):
             if args.max_frame_num > 0 and i >= args.max_frame_num:
                 print('[scene %d] Max frame number: %d, skip %d image' % (scene_idx, args.max_frame_num, i+1))
             else:
-                img_name = 'img_%02d' % i
+                img_name = 'img_%03d' % i
                 save_name = '%s%s' % (img_name, args.ext)
 
                 save_img_list.append(save_name)
