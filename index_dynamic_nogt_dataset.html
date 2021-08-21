@@ -1,0 +1,710 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight:300;
+  font-size:18px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+}	
+h1 {
+  font-weight:300;
+}
+
+.disclaimerbox {
+  background-color: #eee;		
+  border: 1px solid #eeeeee;
+  border-radius: 10px ;
+  -moz-border-radius: 10px ;
+  -webkit-border-radius: 10px ;
+  padding: 20px;
+}
+
+video.header-vid {
+  height: 140px;
+  border: 1px solid black;
+  border-radius: 10px ;
+  -moz-border-radius: 10px ;
+  -webkit-border-radius: 10px ;
+}
+
+img.header-img {
+  height: 140px;
+  border: 1px solid black;
+  border-radius: 10px ;
+  -moz-border-radius: 10px ;
+  -webkit-border-radius: 10px ;
+}
+
+img.rounded {
+  border: 0px solid #eeeeee;
+  border-radius: 10px ;
+  -moz-border-radius: 10px ;
+  -webkit-border-radius: 10px ;
+}
+
+a:link,a:visited
+  {
+  color: #1367a7;
+  text-decoration: none;
+}
+a:hover {
+  color: #208799;
+}
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .vert-cent {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  hr
+    {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+</style>
+
+<html>
+  <head>
+    <title></title>
+    <meta property="og:title" content="HDR Video Reconstruction: A Coarse-to-fine Network and A Real-world Benchmark Dataset, In ICCV 2021." />
+  </head>
+
+  <body>
+    <br>
+    <center>
+      <span style="font-size:42px">HDR Video Reconstruction: A Coarse-to-fine Network and A Real-world Benchmark Dataset</span><br>
+    <br>
+
+      <table align=left width=900px>
+        <center><h1>Dynamic Scenes without Ground Truth</h1></center>
+        <p style="text-align:left;font-size:18px;">
+        <b> We captured a larger scale dataset containing uncontrolled dynamic scenes for qualitative evaluation. Specifically, we captured 50 two-exposure and 50 three-exposure sequences, each contains around 100 frames. This dataset can also be used for semi-supervised or unsupervised training in the future.
+       </b>
+        </p>
+      </table>
+
+    <table align=center width=900px>
+      <center><h1>(a) Dynamic Scenes without Ground Truth (2-exposure)</h1></center>
+    </table>
+    <br>
+    <br>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-10.30.42_seq_grab_loop_0912_3stop_2exps_3s_wb</span> </td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-10.48.54_seq_grab_loop_0912_3stop_2exps_3s_wb</span> </td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-10.58.42_seq_grab_loop_0912_3stop_2exps_3s_wb</span> </td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-10.30.42_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-10.48.54_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-10.58.42_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-11.06.07_seq_grab_loop_0912_3stop_2exps_3s_wb </span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-11.10.43_seq_grab_loop_0912_3stop_2exps_3s_wb </span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-11.20.45_seq_grab_loop_0912_3stop_2exps_3s_wb </span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-11.06.07_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-11.10.43_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-11.20.45_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-11.24.38_seq_grab_loop_0912_3stop_2exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-11.32.20_seq_grab_loop_0912_3stop_2exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-11.40.46_seq_grab_loop_0912_3stop_2exps_3s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-11.24.38_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-11.32.20_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-11.40.46_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-11.43.57_seq_grab_loop_0912_3stop_2exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-15.20.07_seq_grab_loop_0912_3stop_2exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-15.27.35_seq_grab_loop_0912_3stop_2exps_3s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-11.43.57_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-15.20.07_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-15.27.35_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-15.41.01_seq_grab_loop_0912_3stop_2exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-15.50.26_seq_grab_loop_0912_3stop_2exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-15.57.11_seq_grab_loop_0912_3stop_2exps_3s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-15.41.01_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-15.50.26_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-15.57.11_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-16.04.45_seq_grab_loop_0912_3stop_2exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-16.11.35_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-16.19.26_seq_grab_loop_0912_3stop_2exps_3s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-16.04.45_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-16.11.35_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-16.19.26_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-16.36.23_seq_grab_loop_0912_3stop_2exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-19.14.50_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-19.21.04_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-16.36.23_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-19.14.50_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-19.21.04_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-19.28.37_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-19.40.04_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-19.46.46_seq_grab_loop_0912_3stop_2exps_3s_18.0g_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-19.28.37_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-19.40.04_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-19.46.46_seq_grab_loop_0912_3stop_2exps_3s_18.0g_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-19.59.48_seq_grab_loop_0912_3stop_2exps_3s_18.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-20.05.34_seq_grab_loop_0912_3stop_2exps_3s_18.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-20.15.02_seq_grab_loop_0912_3stop_2exps_3s_18.0g_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-19.59.48_seq_grab_loop_0912_3stop_2exps_3s_18.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-20.05.34_seq_grab_loop_0912_3stop_2exps_3s_18.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-20.15.02_seq_grab_loop_0912_3stop_2exps_3s_18.0g_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-20.28.00_seq_grab_loop_0912_3stop_2exps_3s_18.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-20.34.27_seq_grab_loop_0912_3stop_2exps_3s_18.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-20.42.25_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-20.28.00_seq_grab_loop_0912_3stop_2exps_3s_18.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-20.34.27_seq_grab_loop_0912_3stop_2exps_3s_18.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-20.42.25_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-20.51.22_seq_grab_loop_0912_3stop_2exps_3s_24.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-20.59.27_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-21.06.15_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-20.51.22_seq_grab_loop_0912_3stop_2exps_3s_24.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-20.59.27_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-21.06.15_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-21.16.28_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-21.26.50_seq_grab_loop_0912_3stop_2exps_3s_18.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-21.33.23_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-21.16.28_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-21.26.50_seq_grab_loop_0912_3stop_2exps_3s_18.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-21.33.23_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-21.36.50_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">11-22-08.15.12_seq_grab_loop_0912_3stop_2exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">11-22-08.31.50_seq_grab_loop_0912_3stop_2exps_4s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/10-11-21.36.50_seq_grab_loop_0912_3stop_2exps_3s_12.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/11-22-08.15.12_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/11-22-08.31.50_seq_grab_loop_0912_3stop_2exps_4s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">11-22-15.52.37_seq_grab_loop_0912_3stop_2exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">11-22-16.08.08_seq_grab_loop_0912_3stop_2exps_4s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">11-22-16.11.06_seq_grab_loop_0912_3stop_2exps_4s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/11-22-15.52.37_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/11-22-16.08.08_seq_grab_loop_0912_3stop_2exps_4s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/11-22-16.11.06_seq_grab_loop_0912_3stop_2exps_4s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">11-22-16.17.14_seq_grab_loop_0912_3stop_2exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">11-22-16.26.42_seq_grab_loop_0912_3stop_2exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">11-22-16.39.54_seq_grab_loop_0912_3stop_2exps_4s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/11-22-16.17.14_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/11-22-16.26.42_seq_grab_loop_0912_3stop_2exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/11-22-16.39.54_seq_grab_loop_0912_3stop_2exps_4s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">11-22-16.51.52_seq_grab_loop_0912_3stop_2exps_4s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">11-22-17.05.39_seq_grab_loop_0912_3stop_2exps_4s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">11-22-17.22.48_seq_grab_loop_0912_3stop_2exps_4s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/11-22-16.51.52_seq_grab_loop_0912_3stop_2exps_4s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/11-22-17.05.39_seq_grab_loop_0912_3stop_2exps_4s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/11-22-17.22.48_seq_grab_loop_0912_3stop_2exps_4s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">11-22-17.31.41_seq_grab_loop_0912_3stop_2exps_4s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">11-22-17.36.48_seq_grab_loop_0912_3stop_2exps_4s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/11-22-17.31.41_seq_grab_loop_0912_3stop_2exps_4s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_2exp_mp4/11-22-17.36.48_seq_grab_loop_0912_3stop_2exps_4s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+
+      <br> <br> <br>
+      <hr>
+      <br> <br> <br> 
+
+
+    <table align=center width=900px>
+      <center><h1>(b) Dynamic Scenes without Ground Truth (3-exposure)</h1></center>
+    </table>
+    <br>
+    <br>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-10.34.11_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-10.50.12_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-10.57.07_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-10.34.11_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-10.50.12_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-10.57.07_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-11.07.42_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-11.11.43_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-11.22.24_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-11.07.42_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-11.11.43_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-11.22.24_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-11.25.47_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-11.33.27_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-11.42.41_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-11.25.47_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-11.33.27_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-11.42.41_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-11.45.02_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-15.21.28_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-15.29.05_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-11.45.02_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-15.21.28_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-15.29.05_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-15.42.34_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-15.51.46_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-15.59.15_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-15.42.34_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-15.51.46_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-15.59.15_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-16.05.54_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-16.12.47_seq_grab_loop_0912_2stop_3exps_3s_12.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-16.26.20_seq_grab_loop_0912_2stop_3exps_3s_4.0g_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-16.05.54_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-16.12.47_seq_grab_loop_0912_2stop_3exps_3s_12.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-16.26.20_seq_grab_loop_0912_2stop_3exps_3s_4.0g_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-16.05.54_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-16.12.47_seq_grab_loop_0912_2stop_3exps_3s_12.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-16.26.20_seq_grab_loop_0912_2stop_3exps_3s_4.0g_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-16.05.54_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-16.12.47_seq_grab_loop_0912_2stop_3exps_3s_12.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-16.26.20_seq_grab_loop_0912_2stop_3exps_3s_4.0g_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-16.37.33_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-19.17.29_seq_grab_loop_0912_2stop_3exps_3s_18.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-19.22.28_seq_grab_loop_0912_2stop_3exps_3s_18.0g_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-16.37.33_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-19.17.29_seq_grab_loop_0912_2stop_3exps_3s_18.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-19.22.28_seq_grab_loop_0912_2stop_3exps_3s_18.0g_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-19.29.35_seq_grab_loop_0912_2stop_3exps_3s_18.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-19.41.47_seq_grab_loop_0912_2stop_3exps_3s_18.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-19.48.26_seq_grab_loop_0912_2stop_3exps_3s_18.0g_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-19.29.35_seq_grab_loop_0912_2stop_3exps_3s_18.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-19.41.47_seq_grab_loop_0912_2stop_3exps_3s_18.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-19.48.26_seq_grab_loop_0912_2stop_3exps_3s_18.0g_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-19.51.38_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-20.01.00_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-20.06.39_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-19.51.38_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-20.01.00_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-20.06.39_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-20.16.07_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-20.28.53_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-20.35.22_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-20.16.07_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-20.28.53_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-20.35.22_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-20.43.27_seq_grab_loop_0912_2stop_3exps_3s_18.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-20.52.55_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-21.00.38_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-20.43.27_seq_grab_loop_0912_2stop_3exps_3s_18.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-20.52.55_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-21.00.38_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-21.07.55_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-21.17.52_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-21.27.43_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-21.07.55_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-21.17.52_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-21.27.43_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">10-11-21.34.38_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">10-11-21.37.44_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">11-22-08.16.21_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-21.34.38_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/10-11-21.37.44_seq_grab_loop_0912_2stop_3exps_3s_24.0g_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/11-22-08.16.21_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">11-22-08.33.06_seq_grab_loop_0912_2stop_3exps_4s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">11-22-15.54.25_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">11-22-16.12.50_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/11-22-08.33.06_seq_grab_loop_0912_2stop_3exps_4s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/11-22-15.54.25_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/11-22-16.12.50_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">11-22-16.18.41_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">11-22-16.28.33_seq_grab_loop_0912_2stop_3exps_3s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">11-22-16.41.36_seq_grab_loop_0912_2stop_3exps_4s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/11-22-16.18.41_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/11-22-16.28.33_seq_grab_loop_0912_2stop_3exps_3s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/11-22-16.41.36_seq_grab_loop_0912_2stop_3exps_4s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">11-22-16.53.23_seq_grab_loop_0912_2stop_3exps_4s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">11-22-17.06.46_seq_grab_loop_0912_2stop_3exps_4s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">11-22-17.24.54_seq_grab_loop_0912_2stop_3exps_4s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/11-22-16.53.23_seq_grab_loop_0912_2stop_3exps_4s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/11-22-17.06.46_seq_grab_loop_0912_2stop_3exps_4s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/11-22-17.24.54_seq_grab_loop_0912_2stop_3exps_4s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=315px> <span style="font-size:12px">11-22-17.32.54_seq_grab_loop_0912_2stop_3exps_4s_wb</span></td>
+        <td align=center width=315px> <span style="font-size:12px">11-22-17.38.00_seq_grab_loop_0912_2stop_3exps_4s_wb</span></td>
+      </tr>
+    </table>
+    <table align=center width=1000px>
+      <tr>
+        <td align=center width=1000px>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/11-22-17.32.54_seq_grab_loop_0912_2stop_3exps_4s_wb.mp4" type=video/mp4> </video>
+          <video width="325" controls><source src="thumbnails/dynamic_noGT_3exp_mp4/11-22-17.38.00_seq_grab_loop_0912_2stop_3exps_4s_wb.mp4" type=video/mp4> </video>
+        </td>
+      </tr> 
+    </table>
+
+  </body>
+</html>
