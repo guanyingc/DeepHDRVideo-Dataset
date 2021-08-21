@@ -2,7 +2,7 @@
 
 This repository describes the training and testing datasets used in **[HDR Video Reconstruction: A Coarse-to-fine Network and A Real-world Benchmark Dataset, ICCV 2021](http://guanyingc.github.io/DeepHDRVideo/)**. We also provide the python scripts used for processing the raw data and capturing real data. Python scripts in this repository work with python 3.5+.
 
-Datasets can be download in [Google Drive](https://drive.google.com/drive/folders/10CzRavlDob7QkI5zAtQSWLfxeOUPRFZD?usp=sharing) or BaiduYun (TODO).
+Datasets can be download in [Google Drive](https://drive.google.com/drive/folders/10CzRavlDob7QkI5zAtQSWLfxeOUPRFZD?usp=sharing) or BaiduYun (TODO). Thumbnails for the captured dataset can be found in [this page](https://guanyingc.github.io/DeepHDRVideo-Dataset/).
 
 ## Table of Contents
 
