@@ -189,6 +189,7 @@ Similarly, you can obtain the RGB images using the command:
 python cvt_raw_to_rgb_scenes.py --in_dir /path/to/dynamic_raw_data_noGT_2exp --merge_hdr # do not merge hdr
 python cvt_raw_to_rgb_scenes.py --in_dir /path/to/dynamic_raw_data_noGT_3exp --merge_hdr # do not merge hdr
 ```
+The processed RGB datasets in JPG format (due to the large file size, please generate TIF dataset by yourself) are stored in `dynamic_data_noGT_2exp_RGB_JPG.tgz` and `dynamic_data_noGT_3exp_RGB_JPG.tgz`.
 
 ## Citation
 If you find this dataset or code useful in your research, please consider citing: 
