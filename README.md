@@ -77,6 +77,8 @@ python gen_syn_train_dataset.py --in_dir /path/to/HDR/videos/
 ```
 
 The prepared datasets can be downloaded in Google Drive (`Synthetic_Dataset/`).
+
+We have also used the [Vimeo-90K](http://data.csail.mit.edu/tofu/dataset/vimeo_septuplet.zip) dataset for training, please download it from http://toflow.csail.mit.edu/ and unzip it.
 <details>
     <summary>Directory structure</summary>
 
