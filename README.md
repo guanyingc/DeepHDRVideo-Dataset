@@ -2,8 +2,7 @@
 
 This repository describes the training and testing datasets used in **[HDR Video Reconstruction: A Coarse-to-fine Network and A Real-world Benchmark Dataset, ICCV 2021](http://guanyingc.github.io/DeepHDRVideo/)**. We also provide the python scripts used for processing the raw data and capturing real data. Python scripts in this repository work with python 3.5+.
 
-Datasets can be downloaded in [One Drive](https://connecthkuhk-my.sharepoint.com/:f:/g/personal/u3004356_connect_hku_hk/Ep3hSvMQo8tIhesJHwgFv64Bq1R7v6oi9hnLshzw55vedg?e=D2bBxr). Thumbnails for the captured dataset can be found in [this page](https://guanyingc.github.io/DeepHDRVideo-Dataset/).
-<!--[Google Drive](https://drive.google.com/drive/folders/10CzRavlDob7QkI5zAtQSWLfxeOUPRFZD?usp=sharing) or BaiduYun (TODO)-->
+Datasets can be downloaded in [BaiduYun](https://pan.baidu.com/s/19SkOFmOdlQTujuazMlUq2Q?pwd=xwmq). Thumbnails for the captured dataset can be found in [this page](https://guanyingc.github.io/DeepHDRVideo-Dataset/).
 
 
 ## Table of Contents
@@ -26,12 +25,12 @@ Datasets can be downloaded in [One Drive](https://connecthkuhk-my.sharepoint.com
 - Cinematic Wide Gamut HDR video: https://www.hdm-stuttgart.de/vmlab/hdm-hdr-2014/.
 - LiU HDRv Repository - Resources: http://www.hdrv.org/Resources.php.
 
-A copy of the above two datasets can be found in One Drive (`Online_HDR_Dataset/`) in case you cannot download them. Please acknowledge the corresponding papers if you use them.
+A copy of the above two datasets can be found in BaiduYun (`Online_HDR_Dataset/`) in case you cannot download them. Please acknowledge the corresponding papers if you use them.
 
 ### Videos captured with alternating exposures
 - Kalantari13 dataset: this dataset consists of 9 videos for dynamic scenes in RGB image format: https://www.ece.ucsb.edu/~psen/PaperPages/HDRVideo/.
 
-We used this dataset for qualitative evaluation. The prepared dataset can be found in One Drive (`Real_Dataset/TOG13_Dynamic_Dataset.tgz`). 
+We used this dataset for qualitative evaluation. The prepared dataset can be found in BaiduYun (`Real_Dataset/TOG13_Dynamic_Dataset.tgz`). 
 
 <details>
     <summary>Directory structure</summary>
@@ -78,7 +77,7 @@ The command for cropping patches is as follows:
 python gen_syn_train_dataset.py --in_dir /path/to/HDR/videos/
 ```
 
-The prepared datasets can be downloaded in One Drive (`Synthetic_Dataset/`).
+The prepared datasets can be downloaded in BaiduYun (`Synthetic_Dataset/`).
 
 We have also used the [Vimeo-90K](http://data.csail.mit.edu/tofu/dataset/vimeo_septuplet.zip) dataset for training, please download it from http://toflow.csail.mit.edu/ and unzip it.
 <details>
@@ -124,14 +123,14 @@ Synthetic_Train_Data_HdM-HDR-2014
 
 ### Synthetic test dataset
 The synthetic test dataset was generated using two HDR videos (i.e., `POKER FULLSHOT` and `CAROUSEL FIREWORKS`) from [Cinematic Wide Gamut HDR-video](https://www.hdm-stuttgart.de/vmlab/hdm-hdr-2014/), which are not used for training. Each video contains 60 frames and has a resolution of 1920 × 1080. Random Gaussian noise was added to the low-exposure images.
-The source HDR videos can be found in One Drive (`Synthetic_Dataset/HDR_Source_Videos_for_Sythetic_Testset.tgz`). To generate videos with alternating exposures, you can run
+The source HDR videos can be found in BaiduYun (`Synthetic_Dataset/HDR_Source_Videos_for_Sythetic_Testset.tgz`). To generate videos with alternating exposures, you can run
 ```shell
 # for two alternating exposures
 python gen_syn_test_dataset.py --in_dir /path/to/HDR_Source_Videos_for_Sythetic_Testset --expo_n 2
 # for three alternating exposures
 python gen_syn_test_dataset.py --in_dir /path/to/HDR_Source_Videos_for_Sythetic_Testset --expo_n 3
 ```
-The generated videos with alternating exposures can be found in One Drive (`Synthetic_Dataset/HDR_Synthetic_Test_Dataset.tgz`).
+The generated videos with alternating exposures can be found in BaiduYun (`Synthetic_Dataset/HDR_Synthetic_Test_Dataset.tgz`).
 
 
 ## The Captured Real-world Dataset
@@ -148,7 +147,7 @@ In this paper, we rescaled the images to 1536 × 813 for evaluation.
     <img src='images/static_samples.jpg' width="900">
 </p>
 
-This dataset can be found in One Drive (``Real_Dataset/Static/``).
+This dataset can be found in BaiduYun (``Real_Dataset/Static/``).
 The captured raw datasets are stored in `static_raw_data_2exp_release.tgz` and `static_raw_data_3exp_release.tgz`.
 To generate the RGB image datasets from the captured raw data, you can use the following command:
 
@@ -166,7 +165,7 @@ The global motion augmented RGB dataset are stored in `static_RGB_data_2exp_rand
 
 
 ### Real-world dynamic dataset with GT HDR
-This dataset can be found in One Drive (`Real_Dataset/Dynamic/`).
+This dataset can be found in BaiduYun (`Real_Dataset/Dynamic/`).
 Note that we first rearranged the captured raw data according to the description in Section 4 of the paper.
 The prepared raw datasets are stored in `dynamic_raw_data_2exp_release.tgz` and `dynamic_raw_data_3exp_release.tgz`.
 
@@ -185,7 +184,7 @@ The processed RGB datasets are stored in `dynamic_RGB_data_2exp_release.tgz` and
     <img src='images/dynamic_noGT_sample.jpg' width="900">
 </p>
 
-This dataset can be found in One Drive (`Real_Dataset/Dynamic_noGT/`).
+This dataset can be found in BaiduYun (`Real_Dataset/Dynamic_noGT/`).
 The captured raw data are stored in `dynamic_raw_data_noGT_2exp.tgz` and `dynamic_raw_data_noGT_3exp.tgz`.
 
 Similarly, you can obtain the RGB images using the command:
